@@ -1,5 +1,5 @@
 it('should calculate the monthly rate correctly', function () {
-    let obj ={
+    obj ={
       amount: 1000,
       years: 5,
       rate: 12,
@@ -9,7 +9,12 @@ it('should calculate the monthly rate correctly', function () {
   
   
   it("should return a result with 2 decimal places", function() {
-    let Val = calculateMonthlyPayment(obj);
+    obj ={
+    amount: 1000,
+    years: 5,
+    rate: 12,
+  }; 
+      let Val = calculateMonthlyPayment(obj);
       expect(Val.slice(Val.indexOf('.')+1).length).toEqual(2);
   });
   
